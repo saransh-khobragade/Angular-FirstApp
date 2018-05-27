@@ -1,0 +1,23 @@
+
+  databinding inside app works!
+  <br>
+  {{stringInterpolation}}|{{numberInterpolation}}
+  <br>
+
+  <h4>Property Binding</h4>
+  
+  <input type="text" value={{stringInterpolation}}>  
+  <input type="text" [value]="stringInterpolation">
+  
+
+  <p [ngClass]="{redBorder:false}">This is styled</p>
+  <p [ngClass]="{redBorder:ontest()}">This is styled</p>
+  <p [ngStyle]="{color:'blue'}">This is styled</p>
+  
+  <h4>Custom Property binding</h4>
+  <app-property-binding [result]="10"></app-property-binding>
+
+  <hr>
+  <h4>Event binding</h4>
+  <app-event-binding (Cust)="fire($event)"></app-event-binding>
+  

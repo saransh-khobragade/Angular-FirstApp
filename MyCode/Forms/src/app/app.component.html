@@ -1,0 +1,23 @@
+<form #id [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    username<input type="text" formControlName="username"><br>
+    <div formGroupName="userdata">
+      password<input type="text" formControlName="pass"><br>
+      email<input type="text" formControlName="email"><br>
+    </div>
+    
+    <div *ngFor="let g of genders">
+      <input type="radio" formControlName="gender" [value]="g">
+      {{g}}
+    </div>
+  
+    <hr>
+    Hobbies
+    <div formArrayName="hobbies">
+      <div *ngFor="let h of myForm.get('hobbies').controls;let i =index">
+          <input type="text" formControlName="{{i}}">
+      </div>
+    </div>
+    <button (click)="onAddHobby()">ADD</button>
+    <button type="submit" [disabled]="!myForm.valid">Submit</button>
+  
+  </form>

@@ -1,0 +1,7 @@
+<h1>
+  {{title}}
+  <br>
+  <p #boundContent >hello</p>
+  <app-lifecycle *ngIf="!delete" ></app-lifecycle>
+  <button (click)="delete=true">click me</button>
+</h1>

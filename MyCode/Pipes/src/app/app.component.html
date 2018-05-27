@@ -1,0 +1,25 @@
+
+<h1>Pipes</h1>
+<h3>{{name|uppercase }}</h3>
+<h3>{{mydate|date}}</h3>
+
+<h1>format</h1>
+<h3>{{mydate|date:"MM/dd/yy"}}</h3>
+
+<h1>parameter</h1>
+<h3>{{name|slice:3 }}</h3>
+<h3>{{name|slice:3:5 }}</h3>
+
+<h1>chaining</h1>
+<h3>{{name|slice:3:5 | uppercase}}</h3>
+
+<h1>Custum pipe</h1>
+<input type="text" #input (keyup)="0">
+<h3>{{input.value | double }}</h3>
+
+<h1>Filter pipe</h1>
+<input type="text" #input2 (keyup)="0">
+<div *ngFor="let item of collection|filter:input2.value">{{item}}</div>
+
+<h1>Async pipe</h1>
+<div>{{asyncValue|async}}</div>

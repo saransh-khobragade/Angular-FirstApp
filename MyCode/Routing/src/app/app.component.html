@@ -1,0 +1,15 @@
+<div>
+    hello there
+</div>
+
+<input type="text" #id (input)="0"><br>
+
+<a [routerLink]="['']"  [queryParams]="{ analytics: 500 }">Home</a><br>
+<a [routerLink]="['first']">First</a><br>
+<a [routerLink]="['second']">Second</a><br>
+
+<a [routerLink]="['para',id.value]">Para</a><br>
+
+<a [routerLink]="['child']">Child</a>
+
+<router-outlet></router-outlet>

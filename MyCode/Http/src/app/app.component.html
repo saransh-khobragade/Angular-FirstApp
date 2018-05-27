@@ -1,0 +1,13 @@
+Username<input type="text" #username>
+email<input type="text" #email>
+<button (click)="onclick(username.value,email.value)">send</button>
+
+<hr>
+<button (click)="show()">show uploaded data</button>
+<div>
+  <ul>
+    <li *ngFor="let item of items">{{item.username}}</li>
+  </ul>
+</div>
+<hr>
+{{aynscStr | async}}
